@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Объекты</title>
+    <link rel="shortcut icon" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="shortcut icon" sizes="32x32" href="img/favicon-32x32.png">
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/page.html (ссылка на текущую страницу)">
+    <meta property="og:title" content="Название страницы">
+    <meta property="og:image" content="https://example.com/image.jpg (ссылка на отображаемую картинку)">
+    <meta property="og:description" content="Описание страницы">
+    <meta property="og:site_name" content="Название сайта">
+    <meta property="og:locale" content="en_US">
+    <link rel="stylesheet" href="styles/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="styles/jquery-ui.min.css">
+    <link rel="stylesheet" href="styles/swiper.min.css">
+    <link rel="stylesheet" href="styles/main.min.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.inputmask.bundle.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/selectbox.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script src="js/index.js"></script>
+  </head>
+  <body class="main-template">
+    <div class="wrapper">
+      <div class="sidebar">
+        <div class="filter">
+          <div class="label-logo"></div>
+          <div class="head"><a class="head-logo" href="index.html"><img src="img/logo.jpg"></a>
+            <div class="head-descr">Элитная недвижимость от застройщиков</div>
+            <div class="burger"><span></span><span></span><span></span></div>
+            <div class="hidden-menu">
+              <div class="phones">
+                <div class="descr">Бесплатно подберем подходящий вариант</div>
+                <div class="phones-list"><a class="phone" href="tel:+78127772365">+7 (812) 777-23-65</a><a class="phone" href="tel:+79052619692">+7 (905) 261-96-92</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="mobile-button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25"><g fill="#1A69AD" fill-rule="evenodd" transform="translate(0 2)"><rect width="24" height="2" y="2" rx="1"/><circle cx="14" cy="2" r="3" stroke="#FFF" stroke-width="2"/><rect width="24" height="2" y="10" rx="1"/><circle cx="7" cy="11" r="3" stroke="#FFF" stroke-width="2"/><rect width="24" height="2" y="18" rx="1"/><circle cx="16" cy="19" r="3" stroke="#FFF" stroke-width="2"/></g></svg><span>Страна, город, стоимость</span>
+            <div class="arrw"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="5" viewBox="0 0 7 5"><defs><path id="3jcca" d="M314.55 152l-3.27 3.06L308 152"/></defs><g><g opacity=".6" transform="translate(-308 -151)"><use fill="#1c2a36" fill-opacity="0" stroke="#1c2a36" stroke-miterlimit="50" xlink:href="#3jcca"/></g></g></svg></div>
+          </div>
+          <form class="form">
+            <div class="form__title">Фильтр</div>
+            <div class="close-button"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="17" viewBox="0 0 16 17"><defs><path id="eg2ua" d="M326.22 136.14l1.42-1.42 14.14 14.14-1.42 1.42z"/><path id="eg2ub" d="M341.78 136.14l-1.42-1.42-14.14 14.14 1.42 1.42z"/></defs><g><g transform="translate(-326 -134)"><g><g><use fill="#fff" xlink:href="#eg2ua"/></g><g><use fill="#fff" xlink:href="#eg2ua"/></g><g><use fill="#fff" xlink:href="#eg2ub"/></g></g></g></g></svg></div>
+            <div class="form-item">
+              <div class="form-item__label">Страна</div><select class="selectbox">
+<option value="1">Россия</option>
+<option value="2">Испания</option>
+</select>
+            </div>
+            <div class="form-item">
+              <div class="form-item__label">Город</div><select class="selectbox">
+<option value="1">Все города</option>
+<option value="2">Санкт-Петербург</option>
+<option value="3">Москва</option>
+</select>
+            </div>
+            <div class="form-item">
+              <div class="form-item__label">Район или метро</div><select class="selectbox" multiple>
+<option value="1">Приморский</option>
+<option value="2">Василеостровский</option>
+<option value="3">Калининский</option>
+<option value="4">Московский</option>
+<option value="5">Выборгский</option>
+<option value="6">Фрунзенский</option>
+<option value="7">Невский</option>
+<option value="8">Центральный</option>
+</select>
+            </div>
+            <div class="form-item price">
+              <div class="title">Стоимость</div>
+              <div class="range">
+                <div class="range-block">
+                  <label for="from">
+                    <div class="label-title">от</div>
+                    <input class="range-input" id="from" type="text" name="from" value="1"><span>млн</span>
+                  </label>
+                </div>
+                <div class="range-block">
+                  <label for="to">
+                    <div class="label-title">от</div>
+                    <input class="range-input" id="to" type="text" name="to" value="100"><span>млн</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-item room">
+              <div class="title">Комнаты</div>
+              <div class="check-room">
+                <div class="check-room__item">
+                  <input id="stud" type="checkbox" name="room">
+                  <label for="stud"><span>Ст</span></label>
+                </div>
+                <div class="check-room__item">
+                  <input id="one-room" type="checkbox" name="room">
+                  <label for="one-room"><span>1</span></label>
+                </div>
+                <div class="check-room__item">
+                  <input id="two-room" type="checkbox" name="room">
+                  <label for="two-room"><span>2</span></label>
+                </div>
+                <div class="check-room__item">
+                  <input id="three-room" type="checkbox" name="room">
+                  <label for="three-room"><span>3</span></label>
+                </div>
+                <div class="check-room__item">
+                  <input id="four-room" type="checkbox" name="room">
+                  <label for="four-room"><span>4</span></label>
+                </div>
+                <div class="check-room__item">
+                  <input id="five-room" type="checkbox" name="room">
+                  <label for="five-room"><span>5+</span></label>
+                </div>
+              </div>
+            </div>
+            <div class="form-item">
+              <div class="form-item__label">Тип квартиры</div><select class="selectbox" multiple>
+<option value="1">Вилла</option>
+<option value="2">Квартира с террасой</option>
+<option value="3">Квартира</option>
+</select>
+            </div>
+            <div class="form-item">
+              <div class="form-item__label">Срок сдачи</div><select class="selectbox" multiple>
+<option value="1">2019</option>
+<option value="2">2020</option>
+<option value="3">2021</option>
+<option value="4">2022</option>
+<option value="5">2023</option>
+</select>
+            </div>
+            <div class="form-item check">
+              <div class="check-button">
+                <div class="check-button__item">
+                  <input id="with" type="checkbox" name="otdelka">
+                  <label for="with"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="9" viewBox="0 0 12 9"><defs><path id="cl5ha" d="M116.55 522l-6.27 6.06L107 525"/></defs><g><g transform="translate(-106 -521)"><use fill="#fff" fill-opacity="0" stroke="#1c2a36" stroke-miterlimit="50" stroke-width="2" xlink:href="#cl5ha"/></g></g></svg><span>С отделкой</span></label>
+                </div>
+                <div class="check-button__item">
+                  <input id="without" type="checkbox" name="otdelka">
+                  <label for="without"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="9" viewBox="0 0 12 9"><defs><path id="cl5ha" d="M116.55 522l-6.27 6.06L107 525"/></defs><g><g transform="translate(-106 -521)"><use fill="#fff" fill-opacity="0" stroke="#1c2a36" stroke-miterlimit="50" stroke-width="2" xlink:href="#cl5ha"/></g></g></svg><span>Без отделки</span></label>
+                </div>
+              </div>
+            </div>
+            <div class="set-button">
+              <button type="submit">применить</button>
+            </div>
+            <div class="clear-button">
+              <button type="reset"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="9" height="9" viewBox="0 0 9 9"><defs><path id="7fqqa" d="M159.2 575.94l2.95-2.94 1.26 1.26-2.94 2.95 2.94 2.94-1.26 1.26-2.94-2.94-2.95 2.94-1.26-1.26 2.94-2.94-2.94-2.95 1.26-1.26z"/></defs><g><g opacity=".19" transform="translate(-155 -573)"><use fill="#fff" xlink:href="#7fqqa"/></g></g></svg><span>Очистить</span></button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="objects__content-head">
+        <div class="head-sort">
+          <div class="item view">
+            <div class="descr">Показать</div>
+            <div class="link"><a href="object-map.html">
+                <div>Картой</div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="24" viewBox="0 0 17 24"><defs><path id="lab9a" d="M418.5 128a4.5 4.5 0 1 1 .01-9.01 4.5 4.5 0 0 1-.01 9.01zm0-13a8.6 8.6 0 0 0-8.5 8.7c0 5.94 7.6 14.67 7.93 15.04.3.35.84.35 1.14 0 .32-.37 7.93-9.1 7.93-15.05a8.6 8.6 0 0 0-8.5-8.69z"/></defs><g><g transform="translate(-410 -115)" opacity=".2"><use fill="#1a69ad" xlink:href="#lab9a"/></g></g></svg></a><span>
+                <div>Списком</div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="19" viewBox="0 0 24 19"><defs><path id="oe57a" d="M457 119v-2h24v2z"/><path id="oe57b" d="M457 127.5v-2h24v2z"/><path id="oe57c" d="M457 136v-2h24v2z"/></defs><g><g transform="translate(-457 -117)"><g><g><g><use fill="#1a69ad" xlink:href="#oe57a"/></g><g><use fill="#1a69ad" xlink:href="#oe57b"/></g><g><use fill="#1a69ad" xlink:href="#oe57c"/></g></g></g></g></g></svg></span></div>
+          </div>
+          <div class="item sort">
+            <div class="descr">Сортировать</div>
+            <div class="dropdown">
+              <div class="select"><span>По убыванию цены</span>
+                <div class="dropdown-arrow"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="7" height="5" viewBox="0 0 7 5"><defs><path id="3jcca" d="M314.55 152l-3.27 3.06L308 152"/></defs><g><g opacity=".6" transform="translate(-308 -151)"><use fill="#1c2a36" fill-opacity="0" stroke="#1c2a36" stroke-miterlimit="50" xlink:href="#3jcca"/></g></g></svg></div>
+              </div>
+              <input type="hidden" name="sort">
+              <ul class="dropdown-menu">
+                <li>По популярности</li>
+                <li>По убыванию цены</li>
+                <li>По увеличению цены</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="head-contacts">
+          <div class="item phones">
+            <div class="descr">Бесплатно подберем подходящий вариант</div>
+            <div class="phones-list"><a class="phone" href="tel:+78127772365">+7 (812) 777-23-65</a><a class="phone" href="tel:+79052619692">+7 (905) 261-96-92</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="objects__content">
+        <div class="scroll">
+          <ul class="objects__content-list">
+            <li><a href="#"><img src="img/obj1.jpg">
+                <div class="overlay">
+                  <div class="overlay-name">Готовая студия 26.09 м2</div>
+                  <div class="overlay-price">
+                    <div class="summ">1 900 000</div>
+                    <div class="rouble">q</div>
+                  </div>
+                </div></a></li>
+            <li><a href="#"><img src="img/obj2.jpg">
+                <div class="overlay">
+                  <div class="overlay-name">Готовая студия 26.09 м2</div>
+                  <div class="overlay-price">
+                    <div class="summ">1 900 000</div>
+                    <div class="rouble">q</div>
+                  </div>
+                </div></a></li>
+            <li><a href="#"><img src="img/obj3.jpg">
+                <div class="overlay">
+                  <div class="overlay-name">Готовая студия 26.09 м2</div>
+                  <div class="overlay-price">
+                    <div class="summ">1 900 000</div>
+                    <div class="rouble">q</div>
+                  </div>
+                </div></a></li>
+            <li><a href="#"><img src="img/obj4.jpg">
+                <div class="overlay">
+                  <div class="overlay-name">Готовая студия 26.09 м2</div>
+                  <div class="overlay-price">
+                    <div class="summ">1 900 000</div>
+                    <div class="rouble">q</div>
+                  </div>
+                </div></a></li>
+            <li><a href="#"><img src="img/obj5.jpg">
+                <div class="overlay">
+                  <div class="overlay-name">Готовая студия 26.09 м2</div>
+                  <div class="overlay-price">
+                    <div class="summ">1 900 000</div>
+                    <div class="rouble">q</div>
+                  </div>
+                </div></a></li>
+            <li><a href="#"><img src="img/obj6.jpg">
+                <div class="overlay">
+                  <div class="overlay-name">Готовая студия 26.09 м2</div>
+                  <div class="overlay-price">
+                    <div class="summ">1 900 000</div>
+                    <div class="rouble">q</div>
+                  </div>
+                </div></a></li>
+            <li><a href="#"><img src="img/obj7.jpg">
+                <div class="overlay">
+                  <div class="overlay-name">Готовая студия 26.09 м2</div>
+                  <div class="overlay-price">
+                    <div class="summ">1 900 000</div>
+                    <div class="rouble">q</div>
+                  </div>
+                </div></a></li>
+            <li><a href="#"><img src="img/obj8.jpg">
+                <div class="overlay">
+                  <div class="overlay-name">Готовая студия 26.09 м2</div>
+                  <div class="overlay-price">
+                    <div class="summ">1 900 000</div>
+                    <div class="rouble">q</div>
+                  </div>
+                </div></a></li>
+            <li><a href="#"><img src="img/obj9.jpg">
+                <div class="overlay">
+                  <div class="overlay-name">Готовая студия 26.09 м2</div>
+                  <div class="overlay-price">
+                    <div class="summ">1 900 000</div>
+                    <div class="rouble">q</div>
+                  </div>
+                </div></a></li>
+            <li><a href="#"><img src="img/obj10.jpg">
+                <div class="overlay">
+                  <div class="overlay-name">Готовая студия 26.09 м2</div>
+                  <div class="overlay-price">
+                    <div class="summ">1 900 000</div>
+                    <div class="rouble">q</div>
+                  </div>
+                </div></a></li>
+          </ul>
+          <div class="objects__else">
+            <button>показать еще</button>
+          </div>
+          <footer class="footer">
+            <div class="phones">
+              <div class="phones-descr">Бесплатно подберем подходящий вариант</div>
+              <div class="phones-list"><a class="phone" href="tel:+78127772365">+7 (812) 777-23-65</a><a class="phone" href="tel:+79052619692">+7 (905) 261-96-92</a></div>
+            </div>
+            <div class="makeit"><a href="http://makeit-da.ru" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="112" height="21" viewBox="0 0 112 21"><defs><path id="768la" d="M693.45 1727.8l1.78 16.52c.08.7.22 1.3.4 1.81.2.52.54.86 1.05 1.04a7.65 7.65 0 0 0 1.73.23c.14 0 .2.05.2.14 0 .16-.18.24-.55.24a137.82 137.82 0 0 1-4.45-.16c-.5-.04-.74-.13-.74-.27 0-.1.06-.16.18-.18.08-.02.12-.35.12-1l-1.3-13.88h-.07l-6.53 14-.57 1.18c-.1.17-.2.26-.3.26-.1 0-.18-.06-.26-.18l-.57-1.05-.9-1.8-.82-1.63-.8-1.63-.6-1.2c-.17-.34-.55-1.15-1.13-2.43l-1.53-3.34-.86-1.9h-.1l-1.07 12.49c-.02.28-.03.75-.03 1.4 0 .17.07.35.2.51.14.17.3.27.5.3.37.09.71.13 1 .13.16 0 .23.05.23.14 0 .16-.16.24-.48.24a149.07 149.07 0 0 0-1.65-.05l-.5-.02a7.4 7.4 0 0 0-.67 0l-.49.02a46.36 46.36 0 0 0-1.41.05c-.3 0-.46-.08-.46-.23 0-.1.1-.15.27-.15.27 0 .54-.02.8-.08a.92.92 0 0 0 .76-.62c.13-.35.23-.89.3-1.62l1.93-17.52c.05-.34.15-.51.29-.51.15 0 .29.13.4.4l8.16 16.95 7.83-16.92c.12-.29.25-.43.39-.43.16 0 .27.25.32.74z"/><path id="768lb" d="M705.42 1738.88h5.1c.08 0 .12-.06.12-.18l-2.54-7.28c-.05-.2-.1-.3-.19-.3-.07 0-.14.1-.22.3l-2.34 7.28c0 .12.02.18.07.18zm-3.72 5.95l6.04-16.71c.26-.71.46-1.07.6-1.07.09 0 .18.08.26.23.09.15.2.4.33.76l1.33 3.49a2054.7 2054.7 0 0 0 4.88 12.74c.42 1.05.82 1.79 1.18 2.2.37.41.73.67 1.1.78.33.1.69.15 1.08.15.17 0 .26.06.26.17 0 .14-.18.2-.54.2-1.56 0-2.95 0-4.18-.04l-.6-.05c-.14-.02-.2-.07-.2-.13 0-.1.06-.17.2-.2.13-.04.2-.17.2-.4a.88.88 0 0 0-.05-.32l-2.48-6.63c-.06-.1-.14-.16-.24-.16h-5.73c-.13 0-.22.07-.27.21l-1.6 4.78a5.5 5.5 0 0 0-.37 1.8c0 .25.1.43.32.57.21.13.44.2.7.2h.26c.18 0 .27.06.27.17 0 .14-.13.2-.4.2a11.96 11.96 0 0 1-1.27-.04l-.45-.02a8.55 8.55 0 0 0-.76 0l-.6.02a112.89 112.89 0 0 0-2.01.05c-.34 0-.51-.07-.51-.21 0-.11.08-.17.23-.17.23 0 .5-.02.79-.05a1.92 1.92 0 0 0 1.34-.76 6.3 6.3 0 0 0 .9-1.76z"/><path id="768lc" d="M722.57 1739.97v-4.74-4.28c-.01-.63-.03-1.15-.07-1.54a2.06 2.06 0 0 0-.27-1.06c-.16-.22-.45-.37-.87-.46-.2-.05-.5-.08-.9-.08-.15 0-.22-.05-.22-.15 0-.17.14-.25.43-.25a40.77 40.77 0 0 1 2.5.07l.43.02.43-.02a99 99 0 0 1 2.17-.07c.28 0 .43.08.43.25 0 .1-.08.15-.22.15a5 5 0 0 0-.67.09c-.34.05-.57.2-.71.42-.14.23-.23.6-.28 1.1-.02.44-.04.96-.04 1.57V1736.84h.11c.2-.23.52-.57.95-1l1.74-1.8 2.12-2.19a51.63 51.63 0 0 0 2.5-2.7c.23-.3.35-.55.35-.75 0-.29-.11-.47-.34-.56-.16-.07-.24-.14-.24-.2 0-.16.1-.23.32-.23l.4.01.8.05a17.88 17.88 0 0 0 1.16.01 88.78 88.78 0 0 1 2.2-.07c.26 0 .4.07.4.22 0 .12-.1.18-.27.18a4.93 4.93 0 0 0-2.24.8 6.15 6.15 0 0 0-1.35 1.14l-.79.76-1.16 1.15a547.43 547.43 0 0 0-3.62 3.62c-.55.56-.9.93-1.07 1.12l1.31 1.39a339.7 339.7 0 0 0 6.01 6.2c.84.77 1.44 1.33 1.82 1.66a6.61 6.61 0 0 0 2.15 1.4c.56.23 1.1.35 1.65.35.24 0 .35.05.35.17 0 .14-.2.2-.58.2h-1.37c-.83 0-1.44-.01-1.83-.05a3.9 3.9 0 0 1-1.56-.44c-.4-.23-.96-.64-1.67-1.21-.38-.3-1.16-1.09-2.35-2.35-1.2-1.26-2.34-2.5-3.44-3.73a64.99 64.99 0 0 1-2.32-2.66h-.15v5.01a60.26 60.26 0 0 0 .15 3.47c.04.45.13.8.26 1.04.14.24.4.4.76.44.5.07.85.1 1.04.1.15 0 .23.06.23.18 0 .14-.15.2-.43.2h-.74a185.33 185.33 0 0 0-2.7-.07l-.57.02a56.99 56.99 0 0 0-1.63.06c-.28 0-.43-.07-.43-.21 0-.12.07-.17.21-.17.21 0 .48-.04.8-.1a.67.67 0 0 0 .53-.42c.1-.23.19-.58.25-1.07.05-.4.08-1.06.1-1.98.03-.93.04-2.22.04-3.86z"/><path id="768ld" d="M742.6 1739.98v-4.74-4.28c0-.63-.02-1.15-.06-1.54a2.07 2.07 0 0 0-.27-1.06c-.16-.22-.45-.37-.87-.46-.21-.05-.5-.08-.9-.08-.15 0-.22-.05-.22-.15 0-.17.14-.25.43-.25a42.51 42.51 0 0 1 2.57.07l.45.02c3.65 0 5.68 0 6.1-.03.46-.02.84-.07 1.14-.14.03 0 .09-.03.18-.07.09-.04.15-.06.19-.06.07 0 .1.08.1.25 0 .08-.03.25-.08.5-.06.25-.1.5-.13.77a79.33 79.33 0 0 0-.13 1.79c-.04.2-.1.3-.18.3-.15 0-.22-.12-.22-.36 0-.4-.05-.72-.16-.98-.1-.25-.27-.45-.52-.6-.24-.13-.7-.23-1.38-.3a111.78 111.78 0 0 0-3.64-.1c-.1 0-.15.1-.15.28v7.43c0 .18.05.27.15.27 2.41 0 3.82-.01 4.23-.05.65-.05 1.07-.18 1.26-.38l.26-.28c.04-.04.09-.07.13-.07.1 0 .14.08.14.22a17.02 17.02 0 0 0-.32 3.23c0 .33-.06.5-.18.5-.13 0-.2-.08-.2-.24 0-.35-.03-.65-.1-.88-.15-.56-.6-.88-1.38-.96-.9-.1-2.16-.14-3.81-.14-.12 0-.18.07-.18.2v6.97c.02.65.11 1.13.26 1.43.16.3.44.51.85.62.41.11 1.07.16 1.97.16.55 0 1.04-.02 1.48-.06.44-.03.8-.11 1.08-.22.35-.17.61-.4.8-.7.18-.3.31-.72.4-1.25.04-.26.12-.4.23-.4.12 0 .17.14.17.4a17.55 17.55 0 0 1-.35 2.61c-.06.23-.13.39-.22.48a.6.6 0 0 1-.38.18c-.16.02-.45.03-.84.03-1.62 0-3.12-.03-4.5-.08l-2.07-.08a20.06 20.06 0 0 0-1.07.03 37 37 0 0 1-1.55.05c-.28 0-.43-.07-.43-.2 0-.12.07-.18.21-.18.2 0 .48-.03.8-.1a.67.67 0 0 0 .53-.4c.1-.24.18-.6.25-1.08.05-.4.08-1.06.1-1.99.03-.92.04-2.2.04-3.85z"/><path id="768le" d="M761.1 1735.23v4.74c0 1.64 0 2.93.02 3.85.02.92.06 1.58.1 1.99.04.45.14.8.28 1.05.14.24.4.39.76.43.49.07.89.1 1.2.1.14 0 .2.06.2.18 0 .14-.14.2-.42.2h-.89a119.96 119.96 0 0 0-2.72-.07l-.59.02a60.2 60.2 0 0 0-1.68.05c-.29 0-.43-.07-.43-.2 0-.12.07-.17.2-.17.22 0 .48-.04.81-.1a.67.67 0 0 0 .52-.42c.1-.23.19-.58.25-1.07.05-.4.09-1.06.11-1.98.02-.93.03-2.22.03-3.86v-4.74-4.28c0-.63-.03-1.15-.06-1.54-.05-.86-.35-1.36-.9-1.5a3.3 3.3 0 0 0-.83-.1c-.14 0-.21-.05-.21-.15 0-.17.14-.25.43-.25a38.83 38.83 0 0 1 2.29.07l.4.02.39-.02a98.7 98.7 0 0 1 2.21-.07c.29 0 .43.08.43.25 0 .1-.07.15-.2.15a5 5 0 0 0-.69.09c-.33.05-.57.2-.71.43-.15.23-.23.59-.26 1.08-.02.45-.04.97-.04 1.58v4.24z"/><path id="768lf" d="M776.25 1728.6v11.37c0 1.65 0 2.93.03 3.85.02.92.05 1.59.1 2 .04.44.13.8.28 1.04.14.25.4.4.76.44.5.07.9.1 1.2.1.13 0 .2.06.2.17 0 .14-.14.2-.42.2h-.9a119.85 119.85 0 0 0-2.7-.06l-.6.02a59.07 59.07 0 0 0-1.69.05c-.28 0-.43-.07-.43-.21 0-.11.08-.17.22-.17.22 0 .49-.03.8-.1a.67.67 0 0 0 .52-.41c.1-.23.18-.59.25-1.08.05-.4.08-1.06.1-1.98.03-.93.04-2.21.04-3.86v-11.37l-3.94.05c-.84.02-1.44.08-1.82.2-.39.12-.69.33-.9.65-.22.33-.37.61-.46.86-.06.17-.15.26-.27.26-.09 0-.13-.08-.13-.24 0-.14.09-.6.27-1.4l.32-1.4c.09-.35.18-.53.27-.53l.38.14c.24.1.5.15.79.17.8.1 1.5.15 2.1.15h10a16.54 16.54 0 0 0 2.63-.28c.09 0 .14.12.14.35l-.03 1.17-.05 1.35-.01.44c0 .23-.06.35-.19.35-.12 0-.19-.15-.2-.46l-.03-.32c-.06-.45-.33-.8-.8-1.05a6.13 6.13 0 0 0-2.48-.41l-3.35-.05z"/></defs><g><g opacity="1" transform="translate(-672 -1727)"><g opacity="1"><use xlink:href="#768la"/></g><g opacity="1"><use xlink:href="#768lb"/></g><g opacity="1"><use xlink:href="#768lc"/></g><g opacity="1"><use xlink:href="#768ld"/></g><g opacity="1"><use xlink:href="#768le"/></g><g opacity="1"><use xlink:href="#768lf"/></g></g></g></svg><span>Создание сайтов и продвижение</span></a></div>
+            <div class="policy"><a href="#" target="_blank">Политика конфиденциальности</a></div>
+          </footer>
+        </div>
+      </div>
+      <div class="modal-object">
+        <div class="modal-container">
+          <div class="modal-close"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="19" viewBox="0 0 19 19"><defs><path id="fofra" d="M1154.43 64.17l8-7.82 1.42 1.38-8.01 7.83 8.01 7.82-1.41 1.38-8.01-7.82-8.02 7.82-1.41-1.38 8.01-7.82-8.01-7.83 1.41-1.38z"/></defs><g><g transform="translate(-1145 -56)"><use fill="#1c2a36" xlink:href="#fofra"/></g></g></svg></div>
+          <div class="modal-content">
+            <div class="main-slider">
+              <div class="swiper-container">
+                <div class="swiper-overlay__left"></div>
+                <div class="swiper-overlay__right"></div>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide" data-fancybox="images" href="img/slide1.jpg"><img src="img/slide1.jpg"></div>
+                  <div class="swiper-slide" data-fancybox="images" href="img/slide2.jpg"><img src="img/slide2.jpg"></div>
+                  <div class="swiper-slide" data-fancybox="images" href="img/slide3.jpg"><img src="img/slide3.jpg"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="39" viewBox="0 0 20 39"><defs><path id="shape-copy-3-b" d="M960.745572,218.410295 L943.386473,201.618376 C942.871176,201.119915 942.871176,200.309915 943.386473,199.811454 L960.745572,183.019535 C961.26087,182.521074 962.098229,182.521074 962.613527,183.019535 C963.128824,183.517997 963.128824,184.327996 962.613527,184.826458 L946.188406,200.714915 L962.613527,216.603372 C963.128824,217.101834 963.128824,217.911834 962.613527,218.410295 C962.355878,218.659526 962.033816,218.784141 961.679549,218.784141 C961.325282,218.784141 961.003221,218.659526 960.745572,218.410295 Z"/><filter id="shape-copy-3-a" width="110%" height="111.1%" x="-5%" y="-2.8%" filterUnits="objectBoundingBox"><feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/><feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.198341259 0"/></filter></defs><g fill="none" opacity=".5" transform="translate(-943 -182)"><use fill="#000" filter="url(#shape-copy-3-a)" xlink:href="#shape-copy-3-b"/><use fill="#FFF" xlink:href="#shape-copy-3-b"/></g></svg></div>
+                <div class="swiper-button-next"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="39" viewBox="0 0 20 39"><defs><path id="shape-b" d="M987.254428,218.410295 C986.996779,218.659526 986.674718,218.784141 986.320451,218.784141 C985.966184,218.784141 985.644122,218.659526 985.386473,218.410295 C984.871176,217.911834 984.871176,217.101834 985.386473,216.603372 L1001.81159,200.714915 L985.386473,184.826458 C984.871176,184.327996 984.871176,183.517997 985.386473,183.019535 C985.901771,182.521074 986.73913,182.521074 987.254428,183.019535 L1004.61353,199.811454 C1005.12882,200.309915 1005.12882,201.119915 1004.61353,201.618376 L987.254428,218.410295 Z"/><filter id="shape-a" width="110%" height="111.1%" x="-5%" y="-2.8%" filterUnits="objectBoundingBox"><feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/><feColorMatrix in="shadowOffsetOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.198341259 0"/></filter></defs><g fill="none" opacity=".5" transform="translate(-985 -182)"><use fill="#000" filter="url(#shape-a)" xlink:href="#shape-b"/><use fill="#FFF" xlink:href="#shape-b"/></g></svg></div>
+              </div>
+            </div>
+            <div class="info">
+              <div class="info-main">
+                <div class="info-main__descr">
+                  <div class="title">Готовая студия 26.09 м2</div>
+                  <div class="price">
+                    <div class="summ">1 900 000</div>
+                    <div class="rouble">q</div>
+                  </div>
+                  <ul class="info-main__list">
+                    <li><span style="font-weight:700">Расположение:</span> Каменноостровский пр., д. 56</li>
+                    <li><span style="font-weight:700">Район:</span> Всеволожский, Колтушское ш.</li>
+                    <li><span style="font-weight:700">Округ:</span> Всеволожский, Колтушское ш.</li>
+                    <li><span style="font-weight:700">Метро:</span> Ладожская</li>
+                    <li><span style="font-weight:700">Условия оплаты:</span> ипотека (возможно БЕЗ первоначального взноса), материнский капитал </li>
+                  </ul>
+                </div>
+                <form class="recall-form">
+                  <div class="recall-form__order">
+                    <div class="recall-form__title">Хотите узнать подробнее? </div>
+                    <div class="recall-form__subtitle">Оставьте номер и мы перезвоним</div>
+                    <input class="recall-input" type="text" placeholder="+7 (___) ___-__-__" name="phone" id="CODE_PHONE" required>
+                    <div class="recall-button">
+                      <button><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20"><defs><path id="zv9pa" d="M940.3 670.83l-.5.52c-.28.26-.56.53-.82.84-.43.46-.93.67-1.59.67h-.2a9.15 9.15 0 0 1-3.29-1 18.74 18.74 0 0 1-6.22-4.87 17.13 17.13 0 0 1-3.04-5.06 6.03 6.03 0 0 1-.47-2.64c.04-.5.23-.9.58-1.25l1.44-1.44c.2-.2.42-.3.64-.3a.9.9 0 0 1 .62.3c.27.25.51.5.77.76l.4.41 1.15 1.15c.45.45.45.86 0 1.31l-.36.36c-.36.37-.7.7-1.06 1.03l-.02.03c-.37.36-.3.71-.22.95l.01.04c.3.73.72 1.41 1.36 2.22a15.49 15.49 0 0 0 3.75 3.42c.18.1.35.2.52.28l.42.22c.02.01.03.03.05.03.14.08.28.11.42.11a.9.9 0 0 0 .64-.3l1.44-1.43c.15-.15.37-.32.64-.32.26 0 .48.16.6.3l.02.02 2.32 2.32c.44.43.44.87 0 1.32zm-1.5-4.44c-.41-.43-.9-.66-1.43-.66-.52 0-1.02.23-1.44.65l-1.34 1.33-.32-.17c-.15-.07-.3-.14-.42-.22a14.5 14.5 0 0 1-3.47-3.16 8.55 8.55 0 0 1-1.14-1.8l.98-.96.35-.36c.89-.89.89-2.04 0-2.92l-1.15-1.15-.4-.4c-.25-.27-.51-.54-.79-.79a2 2 0 0 0-1.4-.62c-.52 0-1.02.22-1.44.62h-.01l-1.44 1.46c-.54.54-.85 1.2-.91 1.96a7.4 7.4 0 0 0 .54 3.13c.68 1.84 1.7 3.55 3.23 5.38a19.86 19.86 0 0 0 6.6 5.18 10.3 10.3 0 0 0 3.99 1.1c.97 0 1.79-.34 2.43-1.04l.02-.02c.22-.27.47-.5.74-.77l.54-.54c.42-.43.64-.94.64-1.46s-.22-1.03-.65-1.45z"/><path id="zv9pb" d="M933.8 658.76a5.38 5.38 0 0 1 4.42 4.42c.06.28.3.47.57.47h.1a.57.57 0 0 0 .47-.66 6.5 6.5 0 0 0-5.35-5.35.57.57 0 0 0-.66.46c-.06.31.15.6.46.66z"/><path id="zv9pc" d="M942.97 662.82a10.7 10.7 0 0 0-3-5.8 10.7 10.7 0 0 0-5.8-3.01.57.57 0 1 0-.2 1.12 9.59 9.59 0 0 1 5.2 2.69 9.56 9.56 0 0 1 2.68 5.18c.05.28.29.48.56.48l.1-.01c.3-.05.52-.34.46-.65z"/></defs><g><g transform="translate(-923 -654)"><g><use fill="#fcfeff" xlink:href="#zv9pa"/></g><g opacity=".5"><use fill="#fcfeff" xlink:href="#zv9pb"/></g><g opacity=".2"><use fill="#fcfeff" xlink:href="#zv9pc"/></g></g></g></svg><span>Перезвонить мне</span></button>
+                    </div>
+                  </div>
+                  <div class="recall-form__done">
+                    <div class="recall-form__ico"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="44" height="30" viewBox="0 0 44 30"><defs><path id="lt1ca" d="M208 356l-26.27 25.4L168 368.57"/></defs><g><g transform="translate(-166 -354)"><use fill="#fff" fill-opacity="0" stroke="#2674b6" stroke-linecap="round" stroke-miterlimit="50" stroke-width="4" xlink:href="#lt1ca"/></g></g></svg></div>
+                    <div class="recall-form__title">Ваша заявка успешно отправлена</div>
+                    <div class="recall-form__subtitle">Спасибо за обращение в нашу компанию! В ближайшее время мы обязательно с вами свяжемся.</div>
+                  </div>
+                </form>
+              </div>
+              <div class="info-list">
+                <ul>
+                  <li><span style="font-weight:700">Срок сдачи:</span> Сдан</li>
+                  <li><span style="font-weight:700">Метраж:</span> 130 м2</li>
+                  <li><span style="font-weight:700">Метраж:</span> 130 м2</li>
+                  <li><span style="font-weight:700">Этаж:</span> 3 / 4</li>
+                  <li><span style="font-weight:700">Комнаты:</span> 3</li>
+                  <li><span style="font-weight:700">Комнаты:</span> 3</li>
+                </ul>
+              </div>
+              <div class="info-map">
+                <div class="info-map__descr">
+                  <ul>
+                    <li>Бесшумные скоростные лифты фирмы «Steimberg»</li>
+                    <li>Четыре многоуровневых паркинга на 1200 мест</li>
+                    <li>Собственная школа и детский сад</li>
+                    <li>Котельная на территории комплекса</li>
+                    <li>Выезд на КАД в 10 минутах транспортом</li>
+                  </ul>
+                </div>
+                <div class="ymap-object" id="ymap-object"></div>
+              </div>
+              <div class="info-block">
+                <div class="info-block__title">Ипотека</div>
+                <div class="info-block__descr">Проводим консультации. Получаем одобрение на рынке первичной недвижимости. Заполняем анкету на ипотеку и подаем на рассмотрение сразу в 4 банка одновременно. Подбираем оптимальный тариф по страховой программе. Оперативно информируем о решении.</div>
+                <ul class="info-block__list">
+                  <li>
+                    <div class="ico"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="101" height="36" viewBox="0 0 101 36"><defs><path id="774aa" d="M424.03 1484.11H400l1.73-4.7h24.03zm2.6-7.06H402.6l1.73-4.71h24.03zm2.6-7.07H405.2l1.73-4.71h24.03z"/><path id="774ab" d="M450.62 1485.53v.1c1.09.4 2.13 1.08 2.67 1.52 1.68 1.37 2.42 3.18 2.42 5.52 0 3.87-2.07 6.65-5.48 7.53-1.04.3-2.13.4-4.16.4h-10.33v-28.27h9.15c1.88 0 3.16.1 4.3.4 3.31.87 5.49 3.12 5.49 6.7 0 1.9-.7 3.51-1.83 4.59a6.94 6.94 0 0 1-2.23 1.51zm-9.14 3v7.42h3.95c1.18 0 2.27-.1 3.06-.83a3.67 3.67 0 0 0 1.13-2.89 4 4 0 0 0-.74-2.44c-.84-1.02-1.87-1.27-3.65-1.27zm3.16-4.91c.98 0 1.48 0 1.97-.15 1.33-.39 2.17-1.56 2.17-3.17 0-1.9-.89-2.74-2.17-3.13a7.92 7.92 0 0 0-2.17-.2h-3.01v6.65zm19.68 16.97v-23.52h-8.26v-4.74H479l-1.63 4.74h-7.32v23.52zm16.46-28.26h18.6l-1.63 4.74h-11.28v6.26h4.6c3.71 0 5.64.88 6.98 2 1.03.89 2.82 2.84 2.82 6.7 0 3.82-1.84 5.92-3.37 7-1.78 1.22-3.66 1.56-7.47 1.56h-9.25zm9.99 23.52c1.63 0 2.62-.4 3.31-1.27.35-.44.84-1.22.84-2.69 0-1.46-.5-2.49-1.48-3.22-.6-.44-1.39-.69-2.72-.69h-4.25v7.87z"/></defs><g><g transform="translate(-400 -1465)"><g><use fill="#009fdf" xlink:href="#774aa"/></g><g><use fill="#0a2973" xlink:href="#774ab"/></g></g></g></svg></div>
+                    <div class="text">Ставка от 9%<br>Первый взнос от 10%<br>Срок до 30 лет</div>
+                  </li>
+                  <li>
+                    <div class="ico"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="31" viewBox="0 0 160 31"><defs><path id="krg8a" d="M693.85 1497.05a.61.61 0 0 1-.63.47h-3.75v-4.1h3.62v-1.18h-3.62v-3.48h3.67c.29-.02.55.17.63.46h.39v-1.64h-6.44v.4c.1.03.2.1.28.18.1.13.16.3.16.47v9.01a.74.74 0 0 1-.43.64v.4h6.52v-1.63z"/><path id="krg8b" d="M711.48 1497.05a.61.61 0 0 1-.64.47h-3.75v-4.1h3.62v-1.18h-3.61v-3.48h3.68c.3-.02.56.17.63.46h.39v-1.64h-6.45v.4c.1.03.2.1.28.18.1.13.16.3.16.47v9.01a.73.73 0 0 1-.43.64v.4h6.52v-1.63z"/><path id="krg8c" d="M685.77 1487.98v-.4h-8.49v.4c.28.08.47.36.45.66v8.98c.02.3-.17.57-.45.66v.4h2.2v-.4a.63.63 0 0 1-.44-.66v-8.85H684v8.85c.02.3-.17.58-.45.66v.4h2.2v-.4a.63.63 0 0 1-.44-.66v-8.98a.63.63 0 0 1 .46-.66z"/><path id="krg8d" d="M613.48 1479.32a8.48 8.48 0 1 1-16-5.66 8.48 8.48 0 0 1 16 5.66z"/><path id="krg8f" d="M613.97 1490.84v.87c0 1.67-3.77 3.03-8.47 3.05-4.7.01-8.5-1.33-8.5-2.98v-.88z"/><path id="krg8h" d="M613.97 1491.14c0 1.62-3.79 2.95-8.47 2.96-4.68.02-8.5-1.28-8.5-2.9 0-1.62 3.77-2.95 8.49-2.97 4.7-.02 8.46 1.29 8.48 2.9z"/><path id="krg8j" d="M597 1497.8c0-.22 3.8-.43 8.49-.43 4.68 0 8.48.2 8.48.42v.46c0 .21-3.8.43-8.48.43-4.7 0-8.49-.22-8.49-.43z"/><path id="krg8l" d="M674.67 1493.46h-4.57v-1.31h4.57z"/><path id="krg8m" d="M629.88 1496.9c-.07.3-.33.5-.63.52 0 0-.7.06-1.58.06a2.32 2.32 0 0 1-1.92-.84c-.45-.56-.64-1.38-.64-2.5v-2.02c0-2.22.82-3.33 2.53-3.33.75 0 1.53.08 1.53.08.3.02.55.22.63.5h.41v-1.5s-.42-.08-1.03-.17c-.5-.07-1-.1-1.5-.11a3.69 3.69 0 0 0-2.87 1.13c-.7.77-1.05 1.9-1.05 3.39v2.04c0 1.48.35 2.6 1.05 3.37a3.7 3.7 0 0 0 2.87 1.15c.55.01 1.09-.02 1.63-.08l.98-.16v-1.53z"/><path id="krg8n" d="M740.58 1487.58h-2.55v.39c.32.13.5.33.3.84l-2.01 5.16a.58.58 0 0 1-.43-.29c-.16-.31-2.02-4.75-2.14-5.03a.45.45 0 0 1 0-.41c.06-.13.18-.23.33-.26v-.4h-2.62v.4c.37.05.67.29.79.62l2.32 5.53c.09.25.23.49.42.69.24.2.52.33.82.4 0 0-.28.76-.53 1.35-.17.53-.69.9-1.27.89a.65.65 0 0 1-.64-.45h-.44v1.45s.29.21 1.16.21c.54.03 1.07-.12 1.5-.43.45-.34.79-.79.99-1.3.28-.63 3.1-7.94 3.26-8.3.09-.35.39-.6.76-.65z"/><path id="krg8o" d="M635.48 1477.56l1.43-4.96c.03-.12.14-.2.26-.2.13 0 .24.1.26.22l1.41 4.94zm5.8 3.66l-2.59-8.86a1.61 1.61 0 0 0-1.54-1.1c-.7 0-1.33.45-1.55 1.1 0 0-2.37 8.23-2.59 8.83-.09.37-.38.65-.76.74v.43h2.62v-.4a.6.6 0 0 1-.39-.73c.26-1.02.7-2.5.7-2.5h3.94s.64 2.23.7 2.5a.6.6 0 0 1-.4.73v.4h2.62v-.4a1.01 1.01 0 0 1-.76-.74z"/><path id="krg8p" d="M634.14 1493.88s1.38-4.83 1.43-4.96c.04-.11.15-.2.27-.19.12 0 .23.1.25.21l1.4 4.94zm5.82 3.67l-2.58-8.86a1.61 1.61 0 0 0-1.55-1.11c-.7 0-1.33.45-1.54 1.1 0 0-2.37 8.24-2.59 8.85a1 1 0 0 1-.76.74v.4h2.61v-.4a.6.6 0 0 1-.4-.72c.27-1.02.7-2.5.7-2.5h3.94s.64 2.23.7 2.5a.6.6 0 0 1-.4.73v.4h2.64v-.4a1.01 1.01 0 0 1-.77-.73z"/><path id="krg8q" d="M650.73 1472.32a.63.63 0 0 1 .45-.66v-.4h-2.21v.4c.28.08.46.36.44.66v3.6h-4.96v-3.6a.63.63 0 0 1 .45-.66v-.4h-2.21v.4c.28.08.47.36.45.66v8.98c.02.3-.17.58-.45.66v.4h2.2v-.4a.63.63 0 0 1-.44-.66v-4.19h4.96v4.19c.02.3-.16.58-.44.66v.4h2.2v-.4a.63.63 0 0 1-.44-.66z"/><path id="krg8r" d="M650.06 1488.64a.63.63 0 0 1 .45-.66v-.4h-2.19v.4c.27.09.45.36.43.66v3.6h-4.95v-3.6a.63.63 0 0 1 .45-.66v-.4h-2.21v.4c.28.08.47.36.45.66v8.98c.02.3-.17.57-.45.66v.4h2.2v-.4a.63.63 0 0 1-.44-.66v-4.22h4.95v4.22c.02.3-.16.57-.43.66v.4h2.2v-.4a.63.63 0 0 1-.44-.66z"/><path id="krg8s" d="M661.8 1481.3l-4.09-5.4 3.3-3.58c.25-.34.62-.57 1.04-.66v-.4h-1.8l-4.59 5.16v-4.1a.64.64 0 0 1 .48-.66v-.4h-2.36v.4c.3.08.5.36.48.66v8.98c.02.3-.18.58-.48.66v.4h2.36v-.4a.64.64 0 0 1-.48-.66v-3.15l1.13-1.23 4.06 5.44h2.07v-.4a1.96 1.96 0 0 1-1.13-.66z"/><path id="krg8t" d="M660.5 1497.62l-4.08-5.4 3.3-3.58c.24-.34.62-.57 1.04-.66v-.4h-1.81l-4.59 5.16v-4.1a.64.64 0 0 1 .47-.66v-.4h-2.35v.4c.3.08.5.35.48.66v8.98c.02.3-.18.57-.47.66v.4h2.35v-.4a.64.64 0 0 1-.47-.66v-3.16l1.12-1.22 4.06 5.44h2.07v-.4a1.95 1.95 0 0 1-1.13-.66z"/><path id="krg8u" d="M630.22 1479.18c.05.6-.2 1.17-.68 1.53-.46.32-1.16.49-2.36.49-.4 0-.9 0-1.58-.05v-4.08c.66-.04 1.2-.06 1.58-.06 1.11 0 1.9.16 2.36.49.47.36.73.93.68 1.52zm-3.04-3.32c-.45 0-.98.02-1.58.06v-3.48h3.88c.3-.03.59.17.67.46h.4v-1.64h-6.79v.4c.29.07.48.34.47.64v9c.02.3-.18.58-.47.66v.4h3.5c2.84 0 4.33-1.1 4.33-3.18v-.14c0-2.12-1.47-3.18-4.4-3.18z"/><path id="krg8v" d="M729.43 1495.5c.05.6-.2 1.18-.68 1.54-.46.32-1.15.49-2.35.49-.4 0-.91 0-1.59-.05v-4.08c.67-.03 1.2-.06 1.59-.06 1.1 0 1.9.17 2.35.5.47.35.73.92.68 1.5zm-3.04-3.32c-.45 0-.98.02-1.58.06v-3.5h3.9c.3-.02.58.17.66.46h.4v-1.62h-6.8v.4c.29.07.48.34.47.63v9.01c.02.3-.18.57-.47.66v.4h3.5c2.84 0 4.33-1.1 4.33-3.18v-.14c0-2.12-1.47-3.18-4.4-3.18z"/><path id="krg8w" d="M661.62 1487.58v1.63h.42a.64.64 0 0 1 .64-.46h2.18v8.87c.02.3-.18.57-.47.66v.4h2.3v-.4a.64.64 0 0 1-.47-.66v-8.87h2.16c.3-.02.58.17.67.46h.4v-1.63z"/><path id="krg8x" d="M696.21 1487.58v1.63h.4a.64.64 0 0 1 .67-.46h2.17v8.87c.02.3-.18.57-.47.66v.4h2.3v-.4a.64.64 0 0 1-.47-.66v-8.87h2.16c.3-.02.59.17.67.46h.4v-1.63z"/><path id="krg8y" d="M720.24 1490.98c0 .8-.23 1.36-.7 1.7-.46.33-1.2.49-2.26.49l-1.55-.06v-4.33c.54-.03 1.05-.06 1.55-.06 1.04 0 1.8.16 2.26.5.47.32.7.84.7 1.57zm-2.96-3.4c-.43 0-1 .03-1.68.04l-1.77.06v.4c.3.08.5.35.48.65v8.9c.02.3-.18.57-.48.65v.4h2.38v-.4a.63.63 0 0 1-.48-.65v-3.41c.67.05 1.18.08 1.55.08 2.92 0 4.38-1.1 4.38-3.32v-.2c0-2.13-1.46-3.2-4.38-3.2z"/><path id="krg8z" d="M747.78 1490.98c0 .8-.2 1.36-.63 1.7-.43.33-1.12.49-2.08.49l-1.42-.06v-4.33c.5-.03.96-.06 1.42-.06.96 0 1.65.16 2.07.5.42.32.64.84.64 1.57zm-2.71-3.4c-.4 0-.92.03-1.54.04l-1.62.06v.4c.28.08.46.35.44.65v8.9c.02.3-.17.57-.45.65v.4h2.19v-.4a.63.63 0 0 1-.45-.65v-3.41c.61.05 1.08.08 1.42.08 2.68 0 4.02-1.1 4.02-3.32v-.2c0-2.13-1.33-3.2-4.01-3.2z"/><path id="krg8A" d="M750.38 1487.58v.4c.3.08.5.36.47.66v8.98c.02.3-.17.57-.47.66v.4h2.34v-.4a.64.64 0 0 1-.48-.66v-8.87h3.6c.3-.02.58.17.67.46h.4v-1.63z"/><linearGradient id="krg8e" x1="603.41" x2="616.3" y1="1479.26" y2="1461.95" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#da1e33"/><stop offset="1" stop-color="#f47e21"/></linearGradient><linearGradient id="krg8g" x1="608.36" x2="615.67" y1="1492.76" y2="1492.96" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a01c33"/><stop offset="1" stop-color="#c12034"/></linearGradient><linearGradient id="krg8i" x1="604.42" x2="621.95" y1="1491.69" y2="1482.97" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#da1e33"/><stop offset=".89" stop-color="#f38522"/><stop offset="1" stop-color="#f69220"/></linearGradient><linearGradient id="krg8k" x1="1126.73" x2="1131.08" y1="8005.32" y2="8003.5" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#a01c33"/><stop offset="1" stop-color="#c12034"/></linearGradient></defs><g><g transform="translate(-597 -1468)"><g><use fill="#231f20" xlink:href="#krg8a"/></g><g><use fill="#231f20" xlink:href="#krg8b"/></g><g><use fill="#231f20" xlink:href="#krg8c"/></g><g><use fill="url(#krg8e)" xlink:href="#krg8d"/></g><g><use fill="url(#krg8g)" xlink:href="#krg8f"/></g><g><use fill="url(#krg8i)" xlink:href="#krg8h"/></g><g><use fill="url(#krg8k)" xlink:href="#krg8j"/></g><g><use fill="#231f20" xlink:href="#krg8l"/></g><g><use fill="#231f20" xlink:href="#krg8m"/></g><g><use fill="#231f20" xlink:href="#krg8n"/></g><g><use fill="#231f20" xlink:href="#krg8o"/></g><g><use fill="#231f20" xlink:href="#krg8p"/></g><g><use fill="#231f20" xlink:href="#krg8q"/></g><g><use fill="#231f20" xlink:href="#krg8r"/></g><g><use fill="#231f20" xlink:href="#krg8s"/></g><g><use fill="#231f20" xlink:href="#krg8t"/></g><g><use fill="#231f20" xlink:href="#krg8u"/></g><g><use fill="#231f20" xlink:href="#krg8v"/></g><g><use fill="#231f20" xlink:href="#krg8w"/></g><g><use fill="#231f20" xlink:href="#krg8x"/></g><g><use fill="#231f20" xlink:href="#krg8y"/></g><g><use fill="#231f20" xlink:href="#krg8z"/></g><g><use fill="#231f20" xlink:href="#krg8A"/></g></g></g></svg></div>
+                    <div class="text">Ставка от 9%<br>Первый взнос от 10%<br>Срок до 30 лет</div>
+                  </li>
+                  <li>
+                    <div class="ico"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="41" viewBox="0 0 160 41"><defs><path id="w2vfa" d="M834.78 1481.7c.67.72 1.5 1.29 2.44 1.64 1.11.42 2.3.62 3.5.6.62-.01 1.24-.06 1.85-.14a5.16 5.16 0 0 0 1.52-.39c.46-.13.86-.32 1.25-.46.32-.2.66-.32.92-.46l-.45-1-.2-.03c-.52.5-.89.53-1.46.76a8.7 8.7 0 0 1-2.44.26c-.85.05-1.7-.16-2.43-.59a4.76 4.76 0 0 1-1.52-1.52 7.9 7.9 0 0 1-.73-2.3c-.14-.96-.2-1.93-.2-2.9 0-.8.07-1.65.14-2.51.04-.78.25-1.54.59-2.23.3-.65.76-1.21 1.32-1.65.7-.46 1.53-.7 2.37-.67.85-.02 1.68.24 2.38.72.66.46 1.05 1.26 1.25 2.23h1.06v-3.22a6.9 6.9 0 0 0-2.3-.66c-.47-.07-.87-.07-1.33-.13-.4 0-.8-.07-1.12-.07-1.26-.03-2.51.17-3.7.6-.95.37-1.8.96-2.5 1.71a7.07 7.07 0 0 0-1.45 2.7c-.34 1.19-.5 2.4-.47 3.63a11 11 0 0 0 .47 3.43c.15.98.58 1.9 1.24 2.64z"/><path id="w2vfb" d="M895.29 1482.05a.6.6 0 0 1-.2-.46c0-.2-.07-.47-.07-.8v-6.86h1.39c1.25 0 2.18.32 2.7 1 .53.66.8 1.7.8 3.16.03.78-.06 1.56-.27 2.3-.13.5-.38.95-.72 1.33-.3.24-.64.44-1 .59-.38.08-.78.12-1.18.13-.4-.06-.73-.06-.92-.13a1.3 1.3 0 0 1-.52-.26zm3.83 1.31c.74-.06 1.45-.29 2.1-.66.65-.39 1.16-.97 1.47-1.67.38-.73.57-1.73.57-2.99.02-.8-.1-1.59-.38-2.33a3.66 3.66 0 0 0-1.21-1.6 5.99 5.99 0 0 0-2.17-.86c-1.07-.2-2.16-.3-3.25-.27h-1.22v-3.87c0-.4.07-.66.27-.79.19-.13.52-.13 1.04-.13h1.97c.5-.01 1 .01 1.5.07.33.01.65.13.92.32.26.2.46.48.58.8.2.44.35.9.46 1.37h.92v-3.51h-12.12v.34c.1.04.21.06.32.07.14.04.27.1.38.2.1.12.16.26.2.4 0 .2.06.4.06.67v12.71c.01.23 0 .45-.07.67a.41.41 0 0 1-.19.4.55.55 0 0 1-.38.2c-.1.04-.21.07-.32.07v.53h5.93c.87.02 1.75-.02 2.62-.14z"/><path id="w2vfc" d="M881 1468.86a.83.83 0 0 1 .07-.4c0-.1.05-.2.13-.26.11-.1.25-.14.4-.13.2 0 .4-.07.73-.07.4.01.8.06 1.18.13a3 3 0 0 1 1 .6c.28.34.5.71.64 1.12.14.56.21 1.14.2 1.71 0 1.39-.2 2.44-.6 3.17-.39.72-1.12 1.12-2.1 1.12H881zm.96 14.18a1.3 1.3 0 0 0-.32-.06c-.14-.04-.27-.11-.38-.2a1.1 1.1 0 0 1-.2-.4c0-.2-.05-.4-.05-.66v-4.6h1.64c.82 0 1.63-.06 2.44-.2a6.25 6.25 0 0 0 2.04-.72c.61-.38 1.1-.93 1.39-1.6.37-.83.55-1.75.52-2.67.02-.86-.13-1.71-.46-2.5a4.04 4.04 0 0 0-1.32-1.46 4.37 4.37 0 0 0-1.9-.59c-.73-.06-1.46-.13-2.24-.13h-6.26v.53c.1.04.21.06.32.07.14.04.27.1.38.2.1.11.16.25.2.4 0 .2.06.4.06.66v12.54c.01.23 0 .45-.07.66a.4.4 0 0 1-.19.4.54.54 0 0 1-.38.2c-.1.04-.21.06-.32.06v.53h5.1v-.46z"/><path id="w2vfd" d="M874.63 1479.67h-1.06c-.1.53-.23 1.06-.4 1.57-.07.35-.26.66-.53.89-.25.23-.58.35-.92.34-.55.06-1.1.08-1.65.07-.5.02-1.02 0-1.52-.07-.3-.03-.6-.12-.86-.28a.7.7 0 0 1-.32-.54 4 4 0 0 1-.07-.96v-5.16h2.85c.27 0 .53.07.8.07.27.01.53.06.8.14.23.05.45.15.66.28v-2.26c-.2.13-.43.23-.67.28-.52.12-1.06.19-1.6.21h-2.85v-5.2c0-.24.04-.49.13-.72.14-.13.32-.13.66-.13h1.76c.5-.01 1.01 0 1.51.07a1.69 1.69 0 0 1 1.5 1.1c.2.45.35.9.46 1.38h.68v-3.51h-11.16v.54c.1.04.21.06.32.07.14.03.27.1.38.2.1.11.16.25.2.39 0 .2.06.4.06.66v12.55c.01.22 0 .44-.07.66a.4.4 0 0 1-.19.4.54.54 0 0 1-.38.2c-.1.04-.21.06-.32.06v.53h11.8z"/><path id="w2vfe" d="M852.57 1482.05a.6.6 0 0 1-.2-.46c0-.2-.06-.47-.06-.8v-6.86h1.38c1.25 0 2.17.32 2.7 1 .53.66.8 1.7.8 3.16.03.78-.06 1.56-.27 2.3-.13.5-.38.95-.72 1.33-.3.24-.64.44-1 .59-.38.08-.78.12-1.18.13-.4-.06-.66-.06-.92-.13a1.3 1.3 0 0 1-.53-.26zm3.75 1.31c.74-.06 1.46-.29 2.1-.66.66-.4 1.19-.98 1.54-1.67.38-.73.57-1.73.57-2.99.02-.8-.1-1.59-.38-2.33a3.66 3.66 0 0 0-1.21-1.6 5.99 5.99 0 0 0-2.17-.86c-1.07-.2-2.16-.3-3.25-.27h-1.22v-3.87c0-.4.07-.66.27-.79.19-.13.52-.13 1.04-.13h1.97c.5-.01 1 .01 1.5.07.33.01.65.13.92.32.26.2.46.48.58.8.2.44.35.9.46 1.37h.92v-3.51h-12.12v.34c.1.04.21.06.32.07.14.04.27.1.38.2.1.12.16.26.2.4 0 .2.06.4.06.67v12.65c.01.22-.01.45-.07.66a.41.41 0 0 1-.19.4.54.54 0 0 1-.38.2c-.1.05-.21.07-.32.07v.6h5.93c.85.02 1.7-.02 2.55-.14z"/><path id="w2vff" d="M833.18 1489.56v-1.59h119.57v1.59z"/><path id="w2vfg" d="M942.1 1475.82l.03.28c.88 1.05 1.27 1.75 1.84 2.44.26.4.6.8.86 1.2.26.4.55.8.85 1.19a14.77 14.77 0 0 1 1.53 2.57l5.55.07c-.6-.6-1.13-1.19-1.72-1.79-.53-.59-1-1.12-1.32-1.45-.53-.6-1-1.12-1.39-1.6l-1.26-1.45a23.25 23.25 0 0 1-2.18-3.05l.26-.32c.4-.53.87-1.05 1.4-1.71a23.2 23.2 0 0 1 1.65-1.92 19.2 19.2 0 0 1 3.24-3.04h-3.83c-.17.4-.38.8-.6 1.18-.28.53-.59 1.03-.93 1.52-.32.53-.72 1.13-1.06 1.72-.4.6-.72 1.13-1.12 1.65-.4.53-.73 1.06-1.06 1.46-.33.4-.55.74-.74 1.05z"/><path id="w2vfh" d="M942.55 1483.04c-.1-.04-.2-.06-.32-.07a.98.98 0 0 1-.38-.2 1.1 1.1 0 0 1-.2-.39c0-.2-.06-.4-.06-.66v-12.56c-.01-.23 0-.45.07-.66a.4.4 0 0 1 .19-.4c.11-.1.24-.16.38-.2.1-.04.21-.06.32-.06v-.6h-5.42v.54c.1.04.21.06.32.07.14.04.27.1.38.2.1.11.16.25.2.4 0 .2.06.4.06.66v12.54c.01.22 0 .45-.07.66a.4.4 0 0 1-.19.4.54.54 0 0 1-.38.2c-.1.04-.21.06-.32.06v.53h5.42v-.46z"/><path id="w2vfi" d="M910.86 1469.89l2.17 6.6h-4.47zm-3.96 11.53c.2-.96.62-2.3 1.17-3.98h5.4l.74 2.16c.31.79.56 1.6.76 2.42.17.48.29.98.34 1.48h3.9c-.2-.32-.39-.79-.65-1.31a18.5 18.5 0 0 1-.93-2.3l-3.74-10.67a5.59 5.59 0 0 1-.32-1.19c-.07-.32-.07-.6-.13-.79h-4.7v.18c.12.03.23.05.35.06.15.04.29.1.41.2.1.13.17.27.2.42v.32c.02.37-.05.74-.2 1.08l-2.73 6.6c-.48 1.2-.96 2.28-1.3 3.1-.35.8-.69 1.54-.89 2.08-.27.54-.48 1-.68 1.35-.2.33-.35.6-.48.87h3.07c.07-.47.2-1.14.41-2.08z"/><path id="w2vfj" d="M925.65 1482.86h-.32a1.3 1.3 0 0 0-.32-.06.68.68 0 0 1-.57-.57c0-.2-.06-.39-.06-.64v-6.06h6.37v6.14c.02.22 0 .43-.06.64a.4.4 0 0 1-.2.4.54.54 0 0 1-.38.19c-.1.04-.2.06-.31.06v.54h5.42v-.53a1.3 1.3 0 0 0-.32-.06c-.14-.04-.27-.1-.38-.2a1.07 1.07 0 0 1-.2-.4c0-.2-.06-.4-.06-.66v-12.62c-.02-.23 0-.45.06-.66a.4.4 0 0 1 .2-.4c.1-.1.24-.15.38-.19.1-.04.2-.06.32-.06v-.48h-5.1v.54c.1.04.2.06.31.07.14.03.27.1.39.2.09.11.15.24.19.39 0 .2.06.4.06.65v5.16h-6.38v-5.17c-.01-.22 0-.45.07-.66a.4.4 0 0 1 .19-.4c.11-.08.24-.15.38-.19.1-.04.21-.06.32-.06v-.53h-5.42v.54c.1.04.21.06.32.07.14.04.27.1.38.2.1.11.16.25.2.4 0 .19.06.39.06.65v12.59c.01.22-.01.44-.07.65a.4.4 0 0 1-.19.4.55.55 0 0 1-.38.2c-.1.04-.21.06-.32.06v.5h5.42v-.64z"/><path id="w2vfk" d="M822.15 1468.87l-1-1.38-18.26 10.5-8.84-5.1c-.2.56-.34 1.13-.41 1.72l9.31 5.35z"/><path id="w2vfl" d="M802.89 1481.93l-9.5-5.47a15.7 15.7 0 1 0 31.33 1.06c.02-2.49-.57-4.93-1.71-7.13z"/><path id="w2vfm" d="M819.9 1466.17c-.46-.47-.92-.8-1.4-1.19l-15.62 9.04-7.52-4.3c-.26.47-.53 1-.79 1.53l8.25 4.74z"/><path id="w2vfn" d="M816.94 1463.92c-.6-.34-1.21-.65-1.85-.92l-12.2 7.06-5.48-3.1c-.4.4-.72.85-1.12 1.32l6.53 3.76z"/><path id="w2vfo" d="M901.93 1495.62h1.27c.77 0 1.15.32 1.15.95 0 .77-.57 1.27-1.66 1.27h-1.27zm-.78 2.87h1.2c1 0 1.55.6 1.55 1.2 0 .81-.61 1.35-1.62 1.35h-1.54zm-1.01 2.93l.01-.06h-.01zm.01-.06h2.16c1.58 0 2.37-.66 2.37-1.84 0-.66-.4-1.12-1.05-1.38.98-.33 1.5-.8 1.5-1.65 0-.92-.52-1.51-1.7-1.51h-2.04z"/><path id="w2vfp" d="M909.02 1500.4c-.4.72-.86 1.25-1.78 1.25-1.06 0-1.78-.86-1.78-2.05 0-1.45.92-2.7 2.17-2.7.93 0 1.4.53 1.65 1.32l-.59.13c-.2-.6-.53-.92-1.06-.92-.85 0-1.59.92-1.59 2.23 0 .92.46 1.39 1.25 1.39.73 0 1-.4 1.26-.86z"/><path id="w2vfq" d="M913.21 1498.73c.07-.13 0-.2 0-.26a.99.99 0 0 0-.29-.76 1 1 0 0 0-.76-.29c-.86 0-1.26.52-1.52 1.37h2.57zm-2.87.71v.32c0 .92.47 1.45 1.19 1.45.66 0 1.05-.46 1.45-1.05l.53.26c-.53.8-1.06 1.32-2.04 1.32-1.06 0-1.72-.8-1.72-1.98 0-1.6.92-2.77 2.23-2.77 1.06 0 1.65.66 1.65 1.85 0 .2-.06.4-.06.59z"/><path id="w2vfr" d="M915.22 1497.21h2.57l-.06.32h-1.96l-.82 4.14h-.57z"/><path id="w2vfs" d="M919.99 1501.05l-.34-3.51h-.13l-1.62 3.5zm-2.78 0l1.97-4.15h.96l.54 4.15h.41l-.26 1.59h-.46l.06-.96h-3.1l-.26.96h-.46l.26-1.6z"/><path id="w2vft" d="M924.72 1499.45h-.47c-1.36 0-2.02.39-1.9 1.17.07.3.3.53.6.6.54.08.98-.21 1.5-.58zm.17-.64c0-.2.07-.4.07-.55 0-.54-.41-.88-1.02-.88-.41 0-.8.2-1.03.54l-.41-.4c.42-.42.98-.67 1.57-.69.96 0 1.57.62 1.57 1.36 0 .14-.07.42-.07.76l-.34 1.57c-.1.38-.14.77-.13 1.16h-.62a1.36 1.36 0 0 1-.07-.55c-.49.41-.98.73-1.7.58-.5-.09-.88-.47-.98-.95-.27-1.18.63-1.97 2.48-1.97z"/><path id="w2vfu" d="M929.8 1500.47c.23.43.7.68 1.18.67.85 0 1.65-1 1.65-2.39 0-.86-.4-1.32-1.06-1.32-.53 0-1.02.3-1.25.8zm.53-2.98c.33-.4.8-.64 1.31-.66 1 0 1.52.66 1.52 1.91 0 1.65-1 2.83-2.17 2.83-.5 0-.98-.21-1.32-.59l-.46 2.3h-.59l1.25-6.38h.53z"/><path id="w2vfv" d="M937.07 1497.53h-1.33c-.6 0-.9.36-.9.66 0 .42.24.6.72.6h1.21zm-1.33 1.91l-1.53 2.23h-.55l1.49-2.07c-.53-.14-.9-.61-.9-1.16 0-.58.51-1.23 1.54-1.23h2.14l-.9 4.46h-.53l.43-2.23z"/><path id="w2vfw" d="M941.23 1501.05l-.34-3.51h-.13l-1.62 3.5zm-2.71 0l1.97-4.15h.95l.55 4.15h.4l-.26 1.59h-.46l.07-.96h-3.1l-.27.96h-.46l.26-1.6z"/><path id="w2vfx" d="M943.51 1499.8c0 .86.47 1.32 1.06 1.32.79 0 1.6-.99 1.6-2.3 0-.86-.47-1.4-1.06-1.4-.8.02-1.61 1-1.61 2.39zm-.59-.13c0-1.6.99-2.77 2.17-2.77 1 0 1.6.8 1.6 1.98 0 1.51-.99 2.77-2.18 2.77-.93 0-1.59-.7-1.59-1.98z"/><path id="w2vfy" d="M951.92 1497.73l-1.93 3.94h-.59l-.58-3.94-.78 3.94h-.58l.9-4.46h.97l.51 3.88 1.88-3.88h.96l-.9 4.46h-.6z"/></defs><g><g transform="translate(-793 -1463)"><g><use fill="#1a9f29" xlink:href="#w2vfa"/></g><g><use fill="#1a9f29" xlink:href="#w2vfb"/></g><g><use fill="#1a9f29" xlink:href="#w2vfc"/></g><g><use fill="#1a9f29" xlink:href="#w2vfd"/></g><g><use fill="#1a9f29" xlink:href="#w2vfe"/></g><g><use fill="#1a9f29" xlink:href="#w2vff"/></g><g><use fill="#1a9f29" xlink:href="#w2vfg"/></g><g><use fill="#1a9f29" xlink:href="#w2vfh"/></g><g><use fill="#1a9f29" xlink:href="#w2vfi"/></g><g><use fill="#1a9f29" xlink:href="#w2vfj"/></g><g><use fill="#1a9f29" xlink:href="#w2vfk"/></g><g><use fill="#1a9f29" xlink:href="#w2vfl"/></g><g><use fill="#1a9f29" xlink:href="#w2vfm"/></g><g><use fill="#1a9f29" xlink:href="#w2vfn"/></g><g><use fill="#1a9f29" xlink:href="#w2vfo"/></g><g><use fill="#1a9f29" xlink:href="#w2vfp"/></g><g><use fill="#1a9f29" xlink:href="#w2vfq"/></g><g><use fill="#1a9f29" xlink:href="#w2vfr"/></g><g><use fill="#1a9f29" xlink:href="#w2vfs"/></g><g><use fill="#1a9f29" xlink:href="#w2vft"/></g><g><use fill="#1a9f29" xlink:href="#w2vfu"/></g><g><use fill="#1a9f29" xlink:href="#w2vfv"/></g><g><use fill="#1a9f29" xlink:href="#w2vfw"/></g><g><use fill="#1a9f29" xlink:href="#w2vfx"/></g><g><use fill="#1a9f29" xlink:href="#w2vfy"/></g></g></g></svg></div>
+                    <div class="text">Ставка от 9%<br>Первый взнос от 10%<br>Срок до 30 лет                            </div>
+                  </li>
+                  <li>
+                    <div class="ico"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="25" viewBox="0 0 160 25"><defs><path id="gin9b" d="M1082.24 1478.17h9.2v2.03h-.68a1.06 1.06 0 0 0-1.08-1.08h-1.63v9.33h-2.31v-9.33h-1.76c-.67 0-.95.8-1.08 1.08h-.66"/><path id="gin9c" d="M1101.3 1478.17h1.9v10.28h-2.3v-7.17l-5.4 7.17h-1.76v-8.25c0-1.35-.95-1.62-.95-1.62v-.41h3.11v7.44"/><path id="gin9d" d="M1053.56 1488.45h-2.97l-2.03-3.8s-.68-1.07-1.35-1.07h-.68v4.87h-2.16v-8.25a1.24 1.24 0 0 0-1.22-1.36v-.67h3.38v4.33h.96s.67 0 1.08-.96c1.9-2.97 1.62-3.38 2.57-3.38h2.16v.68c-1.49 0-2.03 3.1-3.5 4.19.68.27 1.08.95 2.7 3.92.11.5.57.85 1.09.81"/><path id="gin9e" d="M1107.92 1482.23h5.41v-.41c0-1.5-1.21-2.7-2.7-2.7-1.63 0-2.7 1.08-2.7 2.7zm7.17 4.04a5.05 5.05 0 0 1-4.45 2.44c-2.98 0-5.41-2.03-5.41-5v-.67c0-2.84 2.17-5.14 5.4-5.14 2.85 0 5.15 2.57 5.15 5.4h-7.86v1.77a2.74 2.74 0 0 0 2.84 2.7c1.63 0 2.57-.67 3.39-1.49z"/><path id="gin9f" d="M1061.27 1477.89c-1.22 0-2.57.68-2.98 1.35v-1.08h-3.38v.68s1.08 0 1.08 1.35v12.99h2.3v-5.82c.71.91 1.82 1.42 2.98 1.35 2.84 0 4.75-2.3 4.75-5.14v-.67c0-2.98-1.91-5-4.74-5m2.15 7.03c0 1.35-.81 2.7-2.44 2.7h-.27c-1.08 0-2.16-.95-2.43-1.9v-4.46c0-1.08 1.08-2.16 2.43-2.16h.55s2.02 0 2.16 2.7"/><path id="gin9g" d="M1026.91 1477.9a5.28 5.28 0 0 0-5.54 5.14v.95c0 2.3 2.16 4.74 5.54 4.74 2.98 0 5.68-2.3 5.68-5v-.69c0-2.57-2.3-5.14-5.68-5.14m2.98 7.03c0 1.48-1.36 2.83-2.98 2.83a2.77 2.77 0 0 1-2.83-2.83v-3.38c0-1.35 1.35-2.43 2.83-2.43 1.62 0 2.98 1.08 2.98 2.7"/><path id="gin9h" d="M1080.6 1478.17h-3.1v.68s1.08 0 1.08 1.35v8.25h2.03"/><path id="gin9i" d="M1070.87 1482.23v-4.06h-3.11v.68s.95 0 .95 1.35v8.25h5.14c2.03 0 3.38-1.08 3.38-2.84v-.54c0-1.76-1.35-2.84-3.65-2.84zm0 5.4v-4.59h2.03c1.22 0 1.9.95 1.9 2.03v.54c0 1.08-.96 2.03-1.9 2.03z"/><path id="gin9j" d="M1032.87 1478.17h9.2v2.03h-.68s-.27-1.08-1.08-1.08h-1.63v9.33h-2.3v-9.33h-1.75a1.04 1.04 0 0 0-1.09 1.08h-.67"/><path id="gin9a" d="M990 1495.34V1471h159.04v24.34z"/><path id="gin9l" d="M1002.17 1471.14a12.17 12.17 0 0 1 0 24.35A12.3 12.3 0 0 1 990 1483.3a12.3 12.3 0 0 1 12.17-12.17m-2.43 18.26c-1.35-.68-2.57-2.3-2.57-3.79v-4.33c0-1.75 1.22-3.1 2.57-3.78.23-.16.38-.4.41-.68.27-.41 0-.68 0-.95-.28-.14-.41-.41-.95-.41a.87.87 0 0 0-.68.28l-.4.14a7.8 7.8 0 0 0-4.06 6.76v1.35a8.08 8.08 0 0 0 4.05 7.03l.41.14h.68c.54 0 .68 0 .95-.41 0-.27.27-.4 0-.68 0-.4-.27-.67-.4-.67m10.82-6.76a7.8 7.8 0 0 0-4.08-6.77l-.54-.14c-.14-.27-.41-.27-.68-.27-.32.02-.6.17-.81.4-.27.29-.27.56 0 .96.03.28.17.52.4.68a4.24 4.24 0 0 1 2.44 3.78v4.33a4.57 4.57 0 0 1-2.44 3.79c-.27 0-.4.27-.4.67-.27.28-.27.4 0 .68.13.4.4.4.8.4h.7l.54-.13a8.08 8.08 0 0 0 4.07-7.03"/><path id="gin9m" d="M1131.58 1483.56h-.67v1.75h.67c.67 0 1.07-.27 1.07-.95 0-.68-.4-.8-1.07-.8m-.26 2.45h-1.08v-5.15h2.7v.67h-2.03v1.36h.67c1.08 0 1.76.67 1.76 1.48 0 .96-.95 1.63-2.03 1.63"/><path id="gin9n" d="M1135.65 1483.7h1.5l-.83-2.15zm.4-2.84h.68l2.03 4.87-.67.27-.68-1.63h-2.03l-.68 1.63h-.67z"/><path id="gin9o" d="M1143.08 1486v-2.43h-2.57v2.44h-.67v-5.14h.67v2.03h2.57v-2.03h.82v5.14"/><path id="gin9q" d="M1148.5 1486l-2.58-2.7v2.7h-.67v-5.13h.67v2.16l2.3-2.16h.95l-2.3 2.43 2.3 2.44"/><path id="gin9r" d="M1122.8 1495.47v-24.34h.5v24.34z"/><clipPath id="gin9k"><use xlink:href="#gin9a"/></clipPath><clipPath id="gin9p"><use xlink:href="#gin9a"/></clipPath></defs><g><g transform="translate(-990 -1471)"><g><use fill="#555759" xlink:href="#gin9b"/></g><g><use fill="#555759" xlink:href="#gin9c"/></g><g><use fill="#555759" xlink:href="#gin9d"/></g><g><use fill="#555759" xlink:href="#gin9e"/></g><g><use fill="#555759" xlink:href="#gin9f"/></g><g><use fill="#555759" xlink:href="#gin9g"/></g><g><use fill="#555759" xlink:href="#gin9h"/></g><g><use fill="#555759" xlink:href="#gin9i"/></g><g><use fill="#555759" xlink:href="#gin9j"/></g><g><g/><g clip-path="url(#gin9k)"><use fill="#00b3e3" xlink:href="#gin9l"/></g></g><g><use fill="#555759" xlink:href="#gin9m"/></g><g><use fill="#555759" xlink:href="#gin9n"/></g><g><use fill="#555759" xlink:href="#gin9o"/></g><g><g/><g clip-path="url(#gin9p)"><g><use fill="#555759" xlink:href="#gin9q"/></g><g><use fill="#555759" xlink:href="#gin9r"/></g></g></g></g></g></svg></div>
+                    <div class="text">Ставка от 9%<br>Первый взнос от 10%<br>Срок до 30 лет</div>
+                  </li>
+                </ul>
+              </div>
+              <div class="info-about">
+                <div class="info-about__title">ЖК "ЯСНО.ЯНИНО"</div>
+                <div class="info-about__images">
+                  <div class="pic"><img src="img/objd1.jpg"></div>
+                  <div class="pic"><img src="img/objd2.jpg"></div>
+                </div>
+                <div class="info-about__text">ЖК "ЯСНО.ЯНИНО" - это масштабный проект с объектами инфраструктуры в пос. Янино Всеволожского района Ленинградской области. Будущий микрорайон строится всего в 3 км от КАД, в районе немецкого поселения XIX века. Живописный ровный участок окружен полем и одной стороной примыкает к лесу.<br><br>Район Янино станет прекрасным современным районом, построенным по принципам современной урбанистики - загородный масштаб объектов, ландшафтный характер застройки и богатая социальная инфраструктура. Во внутренних дворах запроектированы площадки для отдыха и занятий спортом детей и взрослых. Озеленение территории предусмотрено с устройством газонов, цветников, пешеходных и велосипедных дорожек. Фасады домов в современном стиле декорированы тонкослойной штукатуркой и единым остеклением.</div>
+              </div>
+              <div class="info-logo"><img src="img/logo.jpg"></div>
+            </div>
+            <div class="about">
+              <div class="about-descr">
+                <div class="text">Агентство недвижимости Expert Agent предлагает самые выгодные цены и сервис высочайшего уровня на рынке недвижимости Санкт-Петербурга.</div>
+              </div>
+              <div class="about-team">
+                <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="photo"><img src="img/pers1.jpg"></div>
+                      <div class="name">Елена Викторовна</div>
+                      <div class="descr">Специалист по работе с клиентами</div>
+                      <div class="phone">+7 (999) 999-99-99</div>
+                      <div class="mail">example@example.ru</div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="photo"><img src="img/pers2.jpg"></div>
+                      <div class="name">Екатерина</div>
+                      <div class="descr">Специалист по работе с клиентами</div>
+                      <div class="phone">+7 (999) 999-99-99</div>
+                      <div class="mail">example@example.ru</div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="photo"><img src="img/pers3.jpg"></div>
+                      <div class="name">Валентина Петрова</div>
+                      <div class="descr">Специалист по работе с клиентами</div>
+                      <div class="phone">+7 (999) 999-99-99</div>
+                      <div class="mail">example@example.ru</div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+              <ul class="about-adv">
+                <li><img src="img/ban1.jpg">
+                  <div class="overlay">
+                    <div class="overlay-ico"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="46" viewBox="0 0 46 46"><defs><path id="waina" d="M797.48 3067.74a22.6 22.6 0 0 1-6.66 16.08 22.6 22.6 0 0 1-16.08 6.66 22.6 22.6 0 0 1-16.08-6.66 22.6 22.6 0 0 1-6.66-16.08 22.6 22.6 0 0 1 6.66-16.08c4.3-4.3 10-6.66 16.08-6.66a22.6 22.6 0 0 1 16.08 6.66c4.3 4.3 6.66 10 6.66 16.08zm-36.73-1.13h-3v2.27h3zm12.86-12.86h2.27v-3h-2.27zm0 15.12h10.6v-2.26h-8.34v-8.33h-2.26zm-7.94 9.55l-1.6-1.6-2.14 2.14 1.6 1.6zm0-21.35l-2.14-2.14-1.6 1.6 2.14 2.14zm10.21 24.65h-2.27v3h2.27zm11.67-2.76l-2.13-2.13-1.6 1.6 2.14 2.12zm0-22.43l-1.6-1.6-2.12 2.14 1.6 1.6zm4.18 12.35v-2.27h-3.01v2.27z"/></defs><g><g clip-path="url(#clip-BBDDFB1F-80D5-45F1-945C-D86674F0FBD6)" transform="translate(-752 -3045)"><use fill="#fff" xlink:href="#waina"/></g></g></svg></div>
+                    <div class="overlay-text">Дизайн-проект квартиры бесплатно при покупке недвижимости.</div>
+                  </div>
+                </li>
+                <li><img src="img/ban2.jpg">
+                  <div class="overlay">
+                    <div class="overlay-ico"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="47" height="53" viewBox="0 0 47 53"><defs><path id="793oa" d="M788 3353.03l-12.52 3.97-12.48-3.92.94-4.07c3.4.4 7.32.64 11.5.64 4.23 0 8.2-.24 11.63-.65zm-9 4.76l9.5-2.79 1.5 6zm-18 3.21l1.5-6 9.5 2.77zm38-16.45c0-1.23-2.25-2.36-5.96-3.22l-3.8-20.31c0-2.22-1.8-4.02-4-4.02h-19.46c-2.22 0-4 1.8-4 4.02l-3.8 20.31c-3.72.86-5.98 1.99-5.98 3.22 0 1.63 3.88 3.06 9.82 3.94l-4.76 20.14a1.11 1.11 0 0 0 2.16.51l1.33-5.61 14.99-4.64 15.04 4.62 1.33 5.63a1.11 1.11 0 1 0 2.16-.51l-4.77-20.16c5.88-.88 9.7-2.3 9.7-3.92z"/></defs><g><g transform="translate(-752 -3317)"><use fill="#fff" xlink:href="#793oa"/></g></g></svg></div>
+                    <div class="overlay-text">Мебель от ведущих фабрик Италии, Испании, Германии напрямую со скидкой до 30%, заказы размещаются напрямую на фабрике.</div>
+                  </div>
+                </li>
+                <li><img src="img/ban3.jpg">
+                  <div class="overlay">
+                    <div class="overlay-ico"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="37" height="50" viewBox="0 0 37 50"><defs><path id="ji5ca" d="M775.48 3689.25c1.16 0 2.85-3.66 3.04-9.24h-6.08c.2 5.58 1.89 9.24 3.04 9.24z"/><path id="ji5cb" d="M778.77 3669.3c1.1 2.15 1.72 5.36 1.83 8.65h5.05a10.22 10.22 0 0 0-6.88-8.65z"/><path id="ji5cc" d="M765.32 3677.95h5.05c.1-3.3.72-6.5 1.83-8.65a10.22 10.22 0 0 0-6.88 8.65z"/><path id="ji5cd" d="M775.48 3668.71c-1.15 0-2.85 3.66-3.04 9.24h6.08c-.19-5.58-1.88-9.24-3.04-9.24z"/><path id="ji5ce" d="M775.48 3691.3c-6.8 0-12.32-5.52-12.32-12.32 0-6.8 5.53-12.32 12.32-12.32 6.8 0 12.32 5.53 12.32 12.32 0 6.8-5.52 12.32-12.32 12.32zm11.3 6.18h-22.6c-.56 0-1.02-.47-1.02-1.04 0-.57.46-1.03 1.03-1.03h22.59c.57 0 1.02.46 1.02 1.03 0 .57-.45 1.04-1.02 1.04zm-4.1 6.16h-14.39c-.56 0-1.02-.47-1.02-1.04 0-.57.46-1.03 1.02-1.03h14.38a1.03 1.03 0 1 1 0 2.06zm7.18-43.14H761.1a4.11 4.11 0 0 0-4.11 4.1v41.08c0 2.27 1.84 4.1 4.1 4.1h28.76c2.26 0 4.1-1.83 4.1-4.1v-41.07c0-2.27-1.84-4.11-4.1-4.11z"/><path id="ji5cf" d="M778.77 3688.66a10.22 10.22 0 0 0 6.88-8.65h-5.05c-.1 3.3-.73 6.5-1.83 8.65z"/><path id="ji5cg" d="M765.32 3680.01a10.22 10.22 0 0 0 6.88 8.65c-1.1-2.15-1.73-5.35-1.83-8.65z"/></defs><g><g clip-path="url(#clip-4EED8FE2-77DB-4472-A5A6-156C7309A685)" transform="translate(-757 -3660)"><g><use fill="#fff" xlink:href="#ji5ca"/></g><g><use fill="#fff" xlink:href="#ji5cb"/></g><g><use fill="#fff" xlink:href="#ji5cc"/></g><g><use fill="#fff" xlink:href="#ji5cd"/></g><g><use fill="#fff" xlink:href="#ji5ce"/></g><g><use fill="#fff" xlink:href="#ji5cf"/></g><g><use fill="#fff" xlink:href="#ji5cg"/></g></g></g></svg></div>
+                    <div class="overlay-text">В Испании помощь в ВНЖ - бесплатно.</div>
+                  </div>
+                </li>
+              </ul>
+              <div class="about-list">
+                <div class="item">
+                  <div class="item__ico"><svg xmlns="http://www.w3.org/2000/svg" width="46" height="45" viewBox="0 0 46 45"><g fill="none" fill-rule="evenodd"><ellipse cx="23" cy="22.464" fill="#1A69AD" rx="23" ry="22.464"/><path fill="#FFF" d="M14.22,26.38 L14.22,23.42 L16.662,23.42 L16.662,10.1 L23.655,10.1 C26.8,10.1 28.835,10.581 30.5,11.728 C32.461,13.06 33.608,14.947 33.608,17.907 C33.608,20.238 32.794,22.236 31.314,23.679 C29.538,25.455 27.244,26.343 23.544,26.343 L20.103,26.343 L20.103,28.822 L32.535,28.822 L32.535,31.745 L20.103,31.745 L20.103,36 L16.662,36 L16.662,31.745 L14.22,31.745 L14.22,28.822 L16.662,28.822 L16.662,26.38 L14.22,26.38 Z M30.019,18.018 C30.019,16.205 29.427,14.947 28.132,14.096 C26.985,13.356 25.69,13.06 23.507,13.06 L20.103,13.06 L20.103,23.42 L22.989,23.42 C25.801,23.42 27.392,22.902 28.539,21.829 C29.612,20.756 30.019,19.535 30.019,18.018 Z"/><polygon fill="#1A69AD" fill-rule="nonzero" points="36.5 9.379 37.621 10.5 11.952 37.169 10.831 36.048"/><polygon fill="#FFF" fill-rule="nonzero" points="35.5 8.379 36.621 9.5 10.952 36.169 9.831 35.048"/></g></svg></div>
+                  <div class="item__title">Без оплат и комиссий</div>
+                  <div class="item__descr">Застройщики платят нам, чтобы о их ЖК узнавали, а это значит, что мы консультируем вас бесплатно и даем объективную информацию</div>
+                </div>
+                <div class="item">
+                  <div class="item__ico"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="46" viewBox="0 0 46 46"><defs><path id="90wfa" d="M942 3939a23 23 0 1 1 46 0 23 23 0 0 1-46 0z"/><path id="90wfb" d="M960.67 3952.76l-1.92-3.68a1.6 1.6 0 0 0-1.2-.84l-3.92-.76.55-4.08a1.78 1.78 0 0 0-.42-1.47l-2.65-3.02 2.7-2.92c.37-.4.54-.94.46-1.47-.14-1.17-.43-4.13-.43-4.13l3.88-.7c.47-.1.94-.4 1.2-.9l1.92-3.59 3.5 1.78c.46.26 1.06.26 1.53 0l3.54-1.7 1.91 3.7c.26.44.69.8 1.16.84l3.88.8-.56 4.08c-.08.53.09 1.1.43 1.46l2.68 3.02-2.72 2.93c-.39.4-.56.93-.47 1.47l.47 4.08-3.84.66c-.47.1-.94.4-1.2.9l-1.91 3.59-3.5-1.78a1.57 1.57 0 0 0-1.54 0z"/><path id="90wfc" d="M959.08 3938.93c.17-.2.29-.12.8.04 0 0 3.3 1.17 3.68 1.17.38 0 .59-.23.84-.46l5.6-5.9c.63-.7 1.25-.94 1.65-.68.19.13.3.31.34.52a.98.98 0 0 1-.25.77l-7.65 10.28a.84.84 0 0 1-.64.33c-.27 0-.52-.17-.68-.46l-3.6-4.94c-.15-.24-.25-.47-.09-.67z"/></defs><g><g transform="translate(-942 -3916)"><g><use fill="#1a69ad" xlink:href="#90wfa"/></g><g><use fill="#fff" fill-opacity="0" stroke="#fff" stroke-miterlimit="50" stroke-width="3" xlink:href="#90wfb"/></g><g><use fill="#fff" xlink:href="#90wfc"/></g></g></g></svg></div>
+                  <div class="item__title">Надежные застройщики СПб и Лен. области</div>
+                  <div class="item__descr">Работаем только с проверенными застройщиками по ФЗ-214. Никаких "серых" предложений</div>
+                </div>
+                <div class="item">
+                  <div class="item__ico"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="46" viewBox="0 0 46 46"><defs><path id="y70oa" d="M562 4210a23 23 0 1 1 46 0 23 23 0 0 1-46 0z"/><path id="y70ob" d="M583 4207v7h3v-7z"/><path id="y70oc" d="M579 4211v3h3v-3z"/><path id="y70od" d="M587 4204v10h3v-10z"/><path id="y70oe" d="M585.11 4218.8a9.7 9.7 0 0 1 0-19.38 9.7 9.7 0 0 1 0 19.39zm13.53 2.13l-4.16-4.16a12.12 12.12 0 0 0-9.37-19.77c-6.68 0-12.11 5.43-12.11 12.1a12.12 12.12 0 0 0 19.77 9.38l4.16 4.17a1.2 1.2 0 0 0 1.71 0c.48-.48.48-1.24 0-1.72z"/></defs><g><g transform="translate(-562 -4187)"><use fill="#1a69ad" xlink:href="#y70oa"/></g><g transform="translate(-562 -4187)"><g><use fill="#fff" xlink:href="#y70ob"/></g><g><use fill="#fff" xlink:href="#y70oc"/></g><g><use fill="#fff" xlink:href="#y70od"/></g><g><use fill="#fff" xlink:href="#y70oe"/></g></g></g></svg></div>
+                  <div class="item__title">Подбор по вашим параметрам за ~5 минут</div>
+                  <div class="item__descr">Специалисты ежедневно собирают актуальную информацию по ЖК и оперативно подбирают варианты квартир по вашим параметрам</div>
+                </div>
+                <div class="item">
+                  <div class="item__ico"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="46" viewBox="0 0 46 46"><defs><path id="waina" d="M797.48 3067.74a22.6 22.6 0 0 1-6.66 16.08 22.6 22.6 0 0 1-16.08 6.66 22.6 22.6 0 0 1-16.08-6.66 22.6 22.6 0 0 1-6.66-16.08 22.6 22.6 0 0 1 6.66-16.08c4.3-4.3 10-6.66 16.08-6.66a22.6 22.6 0 0 1 16.08 6.66c4.3 4.3 6.66 10 6.66 16.08zm-36.73-1.13h-3v2.27h3zm12.86-12.86h2.27v-3h-2.27zm0 15.12h10.6v-2.26h-8.34v-8.33h-2.26zm-7.94 9.55l-1.6-1.6-2.14 2.14 1.6 1.6zm0-21.35l-2.14-2.14-1.6 1.6 2.14 2.14zm10.21 24.65h-2.27v3h2.27zm11.67-2.76l-2.13-2.13-1.6 1.6 2.14 2.12zm0-22.43l-1.6-1.6-2.12 2.14 1.6 1.6zm4.18 12.35v-2.27h-3.01v2.27z"/></defs><g><g clip-path="url(#clip-BBDDFB1F-80D5-45F1-945C-D86674F0FBD6)" transform="translate(-752 -3045)"><use fill="#1a69ad" xlink:href="#waina"/></g></g></svg></div>
+                  <div class="item__title">Экономия вашего времени до 5 дней</div>
+                  <div class="item__descr">Вместо нескольких дней поиска проконсультируем вас здесь и сейчас по актуальным предложениям на сегодняшний день</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature", 
+            "id": 0, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [59.94554327989287,30.38935262114668]
+            }, 
+            "properties": {
+                "balloonContentBody": "<a class='ymaps-baloon-img' data-id='20' href='#'><img src='img/baloon-img.jpg'></a>",
+                "balloonContentFooter": "<a class='ymaps-baloon-title' data-id='20' href='#'>Новая квартира с авторским ремонтом</a><p>21 000 000 $</p>", 
+                "clusterCaption": "Новая элитная", 
+                "hintContent": "Прожекторная ул.29"
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 1, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [59.91142323563909,30.50024587065841]
+            }, 
+            "properties": {
+                "balloonContentBody": "<a class='ymaps-baloon-img' data-id='20' href='#'><img src='img/baloon-img.jpg'></a>",
+                "balloonContentFooter": "<a class='ymaps-baloon-title' data-id='20' href='#'>Новая квартира с авторским ремонтом</a><p>21 000 000 $</p>", 
+                "clusterCaption": "Трешка", 
+                "hintContent": "Прожекторная ул.29"
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 2, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [59.913072, 30.296642]
+            }, 
+            "properties": {
+                "balloonContentBody": "<a class='ymaps-baloon-img' data-id='20' href='#'><img src='img/baloon-img.jpg'></a>",
+                "balloonContentFooter": "<a class='ymaps-baloon-title' data-id='20' href='#'>Новая квартира с авторским ремонтом</a><p>21 000 000 $</p>", 
+                "clusterCaption": "Еще одна метка", 
+                "hintContent": "Прожекторная ул.29"
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 3, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [59.912921, 30.293810]
+            }, 
+            "properties": {
+                "balloonContentBody": "<a class='ymaps-baloon-img' data-id='20' href='#'><img src='img/baloon-img.jpg'></a>",
+                "balloonContentFooter": "<a class='ymaps-baloon-title' data-id='20' href='#'>Новая квартира с авторским ремонтом</a><p>21 000 000 $</p>", 
+                "clusterCaption": "Новая элитная", 
+                "hintContent": "Новая квартира с авторским ремонтом, 21 000 000 $"
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 4, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [59.920463, 30.292522]
+            }, 
+            "properties": {
+                "balloonContentBody": "<a class='ymaps-baloon-img' data-id='20' href='#'><img src='img/baloon-img.jpg'></a>",
+                "balloonContentFooter": "<a class='ymaps-baloon-title' data-id='20' href='#'>Новая квартира с авторским ремонтом</a><p>21 000 000 $</p>", 
+                "clusterCaption": "Трешка", 
+                "hintContent": "Текст подсказки"
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 5, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [59.941227, 30.237376]
+            }, 
+            "properties": {
+                "balloonContentBody": "<a class='ymaps-baloon-img' data-id='20' href='#'><img src='img/baloon-img.jpg'></a>",
+                "balloonContentFooter": "<a class='ymaps-baloon-title' data-id='20' href='#'>Новая квартира с авторским ремонтом</a><p>21 000 000 $</p>", 
+                "clusterCaption": "Еще одна метка", 
+                "hintContent": "Текст подсказки"
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 6, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [59.964780, 30.302761]
+            }, 
+            "properties": {
+                "balloonContentBody": "<a class='ymaps-baloon-img' data-id='20' href='#'><img src='img/baloon-img.jpg'></a>",
+                "balloonContentFooter": "<a class='ymaps-baloon-title' data-id='20' href='#'>Новая квартира с авторским ремонтом</a><p>21 000 000 $</p>", 
+                "clusterCaption": "Новая элитная", 
+                "hintContent": "Новая квартира с авторским ремонтом, 21 000 000 $"
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 7, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [59.964780, 30.302761]
+            }, 
+            "properties": {
+                "balloonContentBody": "<a class='ymaps-baloon-img' data-id='20' href='#'><img src='img/baloon-img.jpg'></a>",
+                "balloonContentFooter": "<a class='ymaps-baloon-title' data-id='20' href='#'>Новая квартира с авторским ремонтом</a><p>21 000 000 $</p>", 
+                "clusterCaption": "Трешка", 
+                "hintContent": "Текст подсказки"
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 8, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [59.985000, 30.402668]
+            }, 
+            "properties": {
+                "balloonContentBody": "<a class='ymaps-baloon-img' data-id='20' href='#'><img src='img/baloon-img.jpg'></a>",
+                "balloonContentFooter": "<a class='ymaps-baloon-title' data-id='20' href='#'>Новая квартира с авторским ремонтом</a><p>21 000 000 $</p>", 
+                "clusterCaption": "Еще одна метка", 
+                "hintContent": "Текст подсказки"
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 9, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [59.964780, 30.302761]
+            }, 
+            "properties": {
+                "balloonContentBody": "<a class='ymaps-baloon-img' data-id='20' href='#'><img src='img/baloon-img.jpg'></a>",
+                "balloonContentFooter": "<a class='ymaps-baloon-title' data-id='20' href='#'>Новая квартира с авторским ремонтом</a><p>21 000 000 $</p>", 
+                "clusterCaption": "Новая элитная", 
+                "hintContent": "Новая квартира с авторским ремонтом, 21 000 000 $"
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 10, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [59.840202, 30.344606]
+            }, 
+            "properties": {
+                "balloonContentBody": "<a class='ymaps-baloon-img' data-id='20' href='#'><img src='img/baloon-img.jpg'></a>",
+                "balloonContentFooter": "<a class='ymaps-baloon-title' data-id='20' href='#'>Новая квартира с авторским ремонтом</a><p>21 000 000 $</p>", 
+                "clusterCaption": "Трешка", 
+                "hintContent": "Текст подсказки"
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 11, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [59.898207, 30.474038]
+            }, 
+            "properties": {
+                "balloonContentBody": "<a class='ymaps-baloon-img' data-id='20' href='#'><img src='img/baloon-img.jpg'></a>",
+                "balloonContentFooter": "<a class='ymaps-baloon-title' data-id='20' href='#'>Новая квартира с авторским ремонтом</a><p>21 000 000 $</p>", 
+                "clusterCaption": "Еще одна метка", 
+                "hintContent": "Текст подсказки"
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 12, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [59.898207, 30.474038]
+            }, 
+            "properties": {
+                "balloonContentBody": "<a class='ymaps-baloon-img' data-id='20' href='#'><img src='img/baloon-img.jpg'></a>",
+                "balloonContentFooter": "<a class='ymaps-baloon-title' data-id='20' href='#'>Новая квартира с авторским ремонтом</a><p>21 000 000 $</p>", 
+                "clusterCaption": "Новая элитная", 
+                "hintContent": "Новая квартира с авторским ремонтом, 21 000 000 $"
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 13, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [59.904243, 30.345464]
+            }, 
+            "properties": {
+                "balloonContentBody": "<a class='ymaps-baloon-img' data-id='20' href='#'><img src='img/baloon-img.jpg'></a>",
+                "balloonContentFooter": "<a class='ymaps-baloon-title' data-id='20' href='#'>Новая квартира с авторским ремонтом</a><p>21 000 000 $</p>", 
+                "clusterCaption": "Трешка", 
+                "hintContent": "Текст подсказки"
+            }
+        },
+        {
+            "type": "Feature", 
+            "id": 14, 
+            "geometry": {
+                "type": "Point", 
+                "coordinates": [59.972785, 30.263131]
+            }, 
+            "properties": {
+                "balloonContentBody": "<a class='ymaps-baloon-img' data-id='20' href='#'><img src='img/baloon-img.jpg'></a>",
+                "balloonContentFooter": "<a class='ymaps-baloon-title' data-id='20' href='#'>Новая квартира с авторским ремонтом</a><p>21 000 000 $</p>", 
+                "clusterCaption": "Еще одна метка", 
+                "hintContent": "Текст подсказки"
+            }
+        }
+    ]
+}
